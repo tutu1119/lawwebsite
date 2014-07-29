@@ -1,0 +1,25 @@
+	.listbody
+	{
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 50px;
+		font-size:20px;
+	}
+	.listall
+	{
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 80%;
+		margin-left: 3%;
+		margin-top: 50px;
+		font-size:20px;
+	}	
+	.boldface
+	{
+		font-size: 20px;
+		font-weight: 700;
+	}

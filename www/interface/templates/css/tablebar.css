@@ -1,0 +1,26 @@
+
+	table {	
+		width: 100%; 
+	}
+	#testTable { 
+		width : 350px;
+	}
+	#tablePagination { 
+		background-color: #CCDDFF; 
+		font-size: 1.0em; 
+		padding: 0px 5px; 
+		height: 35px
+	}
+	#tablePagination_paginater { 
+		margin-left: auto; 
+		margin-right: auto;
+	}
+	#tablePagination img { 
+		padding: 0px 2px; 
+	}
+	#tablePagination_perPage { 
+		float: left; 
+	}
+	#tablePagination_paginater { 
+		float: right; 
+	}
