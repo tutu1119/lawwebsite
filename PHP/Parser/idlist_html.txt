@@ -1,0 +1,436 @@
+--------------------------------------
+ id="tree"  style="padding:0 0 0 10px; margin:0 0 0 10px;">
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=01000000" id="01000000">憲法</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=02000000" id="02000000">國民大會（憲法國民大會章條文已停止適用）</a></span></li>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">總統</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">總統府</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03001001" id="03001001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03001002" id="03001002">中央研究院目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03001003" id="03001003">國史館目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03001004" id="03001004">資政國策顧問目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03001005" id="03001005">資訊公開目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03001006" id="03001006">訴願審議目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">國家安全會議</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03002001" id="03002001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03002002" id="03002002">議事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03002003" id="03002003">情報工作目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03002004" id="03002004">特種勤務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03002005" id="03002005">訴願審議目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=03002006" id="03002006">資訊公開目</a></span></li>
+</ul>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">行政</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">院本部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04001001" id="04001001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04001002" id="04001002">通用目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04001003" id="04001003">基金管理目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04001004" id="04001004">消費者保護目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">外交部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04003001" id="04003001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04003002" id="04003002">領事業務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04003003" id="04003003">外交業務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04003004" id="04003004">國際發展目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">國防部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004001" id="04004001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004002" id="04004002">政戰目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004003" id="04004003">人事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004004" id="04004004">兵役目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004005" id="04004005">保險撫卹目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004006" id="04004006">服制旗章目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004007" id="04004007">作戰目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004008" id="04004008">教育訓練目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004009" id="04004009">軍備後勤目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004010" id="04004010">交通通信目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004011" id="04004011">主計財務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004012" id="04004012">軍法目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004013" id="04004013">醫務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04004014" id="04004014">留守業務目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">財政部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04005001" id="04005001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04005002" id="04005002">綜合規劃目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04005003" id="04005003">國際財政目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04005005" id="04005005">推動促參目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04005006" id="04005006">財政資訊目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04005007" id="04005007">國庫目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04005008" id="04005008">賦稅目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04005009" id="04005009">關務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04005010" id="04005010">國有財產目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">教育部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006001" id="04006001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006002" id="04006002">教育通用目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006003" id="04006003">綜合規劃目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006004" id="04006004">私立學校目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006005" id="04006005">高等教育目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006006" id="04006006">技術及職業教育目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006007" id="04006007">終身教育目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006008" id="04006008">國際及兩岸事務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006009" id="04006009">師資培育及藝術教育目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006010" id="04006010">資訊及科技教育目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006020" id="04006020">學生事務及特殊教育目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006012" id="04006012">國民及學前教育目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006013" id="04006013">體育目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006011" id="04006011">青年發展目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006014" id="04006014">秘書目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006015" id="04006015">人事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006016" id="04006016">政風目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006017" id="04006017">會計目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006018" id="04006018">統計目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04006019" id="04006019">法制目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">法務部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007001" id="04007001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007002" id="04007002">綜合規劃目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007003" id="04007003">法制目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007004" id="04007004">法律事務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007005" id="04007005">檢察目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007006" id="04007006">保護目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007007" id="04007007">國際兩岸目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007009" id="04007009">人事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007010" id="04007010">會計目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007013" id="04007013">調查目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007014" id="04007014">行政執行目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007015" id="04007015">廉政目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007016" id="04007016">矯正目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007017" id="04007017">法訓目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04007018" id="04007018">法醫目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">勞動部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010001" id="04010001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010002" id="04010002">勞動關係目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010003" id="04010003">勞動保險目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010004" id="04010004">勞動福祉退休目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010005" id="04010005">勞動條件及就業平等目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010006" id="04010006">職業安全衛生目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010007" id="04010007">勞動檢查目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010008" id="04010008">職業訓練目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010009" id="04010009">就業服務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04010010" id="04010010">其他目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">衛生福利部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012001" id="04012001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012002" id="04012002">綜合規劃目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012003" id="04012003">社會保險目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012004" id="04012004">社會救助及社工目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012005" id="04012005">護理及健康照護目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012006" id="04012006">保護服務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012007" id="04012007">醫事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012008" id="04012008">心理及口腔健康目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012009" id="04012009">中醫藥目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012010" id="04012010">疾病管制目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012011" id="04012011">食品藥物管理目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012012" id="04012012">國民健康目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012013" id="04012013">中央健康保險目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012014" id="04012014">社會及家庭目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012015" id="04012015">秘書目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012016" id="04012016">人事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012017" id="04012017">會計目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012020" id="04012020">統計目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012018" id="04012018">附屬醫療及社會福利機構管理目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04012019" id="04012019">科技發展目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">文化部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04014001" id="04014001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04014002" id="04014002">文創產業目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04014003" id="04014003">文化資產目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04014004" id="04014004">影視出版目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04014005" id="04014005">文化藝術目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04014006" id="04014006">建設目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">科技部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04015001" id="04015001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04015002" id="04015002">科學技術目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04015003" id="04015003">園區目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">國家發展委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04016001" id="04016001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04016002" id="04016002">院（處）務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04016003" id="04016003">通用目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04016004" id="04016004">國營經濟事業目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04016006" id="04016006">人事管理目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">金融監督管理委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018001" id="04018001">組織目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018010" id="04018010">消費者保護目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018002" id="04018002">收費目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018003" id="04018003">裁罰措施公布目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018004" id="04018004">金融交易監視目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018005" id="04018005">基金管理目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018008" id="04018008">銀行目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018006" id="04018006">證券暨期貨管理目  </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018009" id="04018009">保險目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04018007" id="04018007">檢查目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">僑務委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04020001" id="04020001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04020002" id="04020002">綜合規劃目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04020003" id="04020003">僑民權益目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04020004" id="04020004">僑民教育目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04020005" id="04020005">一般業務目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">國軍退除役官兵輔導委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04021001" id="04021001">組織目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04021002" id="04021002">處務目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04021003" id="04021003">輔導管理目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04021004" id="04021004">就養目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04021005" id="04021005">就學目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04021006" id="04021006">就業目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04021007" id="04021007">就醫目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">原住民族委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04022001" id="04022001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04022002" id="04022002">綜合規劃目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04022003" id="04022003">教育文化目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04022004" id="04022004">社會福利目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04022005" id="04022005">經濟發展目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04022007" id="04022007">公共建設目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04022006" id="04022006">土地管理目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04022008" id="04022008">文化園區目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">客家委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04023001" id="04023001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04023002" id="04023002">客家事務目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">行政院主計總處</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04024001" id="04024001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04024002" id="04024002">歲計目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04024003" id="04024003">會計目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04024004" id="04024004">統計目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04024005" id="04024005">主計資訊目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04024006" id="04024006">主計人事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04024007" id="04024007">其他目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">行政院人事行政總處</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04025001" id="04025001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04025002" id="04025002">綜合規劃目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04025003" id="04025003">組編人力目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04025004" id="04025004">培訓考用目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04025005" id="04025005">給與福利目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">中央銀行</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04026001" id="04026001">總綱目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04026002" id="04026002">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04026003" id="04026003">業務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04026004" id="04026004">發行目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04026005" id="04026005">外匯目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">國立故宮博物院</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04027001" id="04027001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04027002" id="04027002">故宮博物目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">中央選舉委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04028001" id="04028001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04028002" id="04028002">選舉行政目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04028003" id="04028003">公投行政目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">公平交易委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04029001" id="04029001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04029002" id="04029002">公平交易目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">國家通訊傳播委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030001" id="04030001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030002" id="04030002">基本目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030003" id="04030003">通訊目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030004" id="04030004">傳播目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030005" id="04030005">收費標準目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030006" id="04030006">法制業務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030007" id="04030007">秘書業務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030008" id="04030008">人事業務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030009" id="04030009">主計業務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030010" id="04030010">資訊業務目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04030011" id="04030011">其他目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">飛航安全調查委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04031001" id="04031001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04031002" id="04031002">航空目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">臺灣省政府</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04032001" id="04032001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=04032002" id="04032002">通用目</a></span></li>
+</ul>
+</ul>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=05000000" id="05000000">立法</a></span></li>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">司法</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">院本部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06001001" id="06001001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06001002" id="06001002">釋憲目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06001003" id="06001003">民事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06001004" id="06001004">刑事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06001005" id="06001005">行懲及智財目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06001006" id="06001006">少年及家事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06001007" id="06001007">司法行政目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06001008" id="06001008">司法人事目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06001009" id="06001009">一般行政目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">公務員懲戒委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06002001" id="06002001">公懲目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">司法院司法人員研習所</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=06003001" id="06003001">公證目</a></span></li>
+</ul>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">考試</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">院本部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07001001" id="07001001">組織目  </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07001002" id="07001002">通用目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">考選部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07002001" id="07002001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07002002" id="07002002">一般性考試目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07002003" id="07002003">公務人員考試目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07002004" id="07002004">專門職業及技術人員考試目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">銓敘部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003001" id="07003001">組織目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003002" id="07003002">任用目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003003" id="07003003">俸給目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003004" id="07003004">考績目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003005" id="07003005">獎懲目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003006" id="07003006">人事管理目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003007" id="07003007">退休目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003008" id="07003008">保險目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003009" id="07003009">撫卹目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003010" id="07003010">登記目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003011" id="07003011">考試分發目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003012" id="07003012">考試目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07003013" id="07003013">公務人員協會目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">公務人員保障暨培訓委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07004001" id="07004001">組織目       </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07004002" id="07004002">保障目    </a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07004003" id="07004003">培訓目    </a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">公務人員退休撫卹基金監理委員會</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=07005001" id="07005001">組織目</a></span></li>
+</ul>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">監察</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">院本部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=08001001" id="08001001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=08001002" id="08001002">監察目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=08001003" id="08001003">審計目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=08001004" id="08001004">政獻目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=08001005" id="08001005">院（處）務目</a></span></li>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">審計部</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=08002001" id="08002001">組織目</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=08002002" id="08002002">審計目</a></span></li>
+</ul>
+</ul>
+<li style="list-style: none;"><span class="treeFirstLV"><a href="#">組改前廢止法規</a></span>
+--------------------------------------
+>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiA" id="FeiA">憲法暨中央地方體制法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiB" id="FeiB">民事類暨其關係法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiC" id="FeiC">刑事類暨其關係法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiD" id="FeiD">內政法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiE" id="FeiE">外交法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiF" id="FeiF">國防法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiG" id="FeiG">財政及金融法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiH" id="FeiH">教育科學文化法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiI" id="FeiI">法務法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiJ" id="FeiJ">經濟法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiK" id="FeiK">交通法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiL" id="FeiL">衛生福利法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiM" id="FeiM">農業法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiN" id="FeiN">勞動法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiO" id="FeiO">環保法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiP" id="FeiP">新聞法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiQ" id="FeiQ">大陸事務法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiR" id="FeiR">考選法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiS" id="FeiS">銓敘法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiT" id="FeiT">主計法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiU" id="FeiU">審計法規</a></span></li>
+<li style="list-style: none;"><span ><a href="LawClassListN.aspx?TY=FeiY" id="FeiY">國際法暨條約協定</a></span></li>
+</ul>
+</ul>
+</div>
+       
