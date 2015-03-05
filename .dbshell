@@ -1,0 +1,49 @@
+db.korea.mapReduce(map_korea,reduce, {"out":{"reduce":"join"}})
+db.japan.mapReduce(map_japan,reduce, {"out":{"reduce":"join"}})
+db.join.drop()
+db.taiwan.mapReduce(map_taiwan,reduce, {"out":{"reduce":"join"}})
+map_taiwan = function() {     var values = {         original_ID: this.original_ID,         chinese_traditionalshape: this.chinese_traditionalshape, chinese_statutory:this.chinese_statutory, chinese_equivalent:this.chinese_equivalent, chinese_equivalent_statutory:this.chinese_equivalent_statutory, traditonalchinese_to_english:this.traditonalchinese_to_english,             };     emit(this.original_ID, values); };
+map_japan = function() {     var values = {        japanese: this.japanese,        equivalent: this.equivalent,        japanese_to_english:this.japanese_to_english,     };     emit(this.original_ID, values); };
+map_korea = function() {     var values = {        korean: this.korean,        korean_to_chinese: this.korean_to_chinese,        o_korean_to_english:this.o_korean_to_english,        e_korean_to_english:this.e_korean_to_english,     };     emit(this.original_ID, values); };
+reduce = function(key, values) {     var result = {};     values.forEach(function(value) {         var field;         for (field in value) {             if (value.hasOwnProperty(field))  {                 result[field] = value[field];             }         }     });     return result; };
+db.taiwan.mapReduce(map_taiwan,reduce, {"out":{"reduce":"join"}})
+;
+map_taiwan = function() {     var values = {         original_ID: this.original_ID,         chinese_traditionalshape: this.chinese_traditionalshape, chinese_statutory:this.chinese_statutory, chinese_equivalent:this.chinese_equivalent, chinese_equivalent_statutory:this.chinese_equivalent_statutory, traditonalchinese_to_english:this.traditonalchinese_to_english,             };     emit(this.original_ID, values); };
+map_japan = function() {     var values = {        japanese: this.japanese,        equivalent: this.equivalent,        japanese_to_english:this.japanese_to_english,     };     emit(this.original_ID, values); };
+map_korea = function() {     var values = {        korean: this.korean,        korean_to_chinese: this.korean_to_chinese,        o_korean_to_english:this.o_korean_to_english,        e_korean_to_english:this.e_korean_to_english,     };     emit(this.original_ID, values); };
+reduce = function(key, values) {     var result = {};     values.forEach(function(value) {         var field;         for (field in value) {             if (value.hasOwnProperty(field))  {                 result[field] = value[field];             }         }     });     return result; };
+db.taiwan.mapReduce(map_taiwan,reduce, {"out":{"reduce":"join"}})
+db.japan.mapReduce(map_japan,reduce, {"out":{"reduce":"join"}})
+use cjkt
+db.japan.mapReduce(map_japan,reduce, {"out":{"reduce":"join"}})
+db.korea.mapReduce(map_korea,reduce, {"out":{"reduce":"join"}})
+db.taiwan.mapReduce(map_taiwan,reduce, {"out":{"reduce":"join"}})
+db.join.drop()
+map_taiwan = function() {     var values = {         original_ID: this.original_ID,         chinese_traditionalshape: this.chinese_traditionalshape, chinese_statutory: this.chinese_statutory, chinese_equivalent: this.chinese_equivalent, chinese_equivalent_statutory: this.chinese_equivalent_statutory, traditonalchinese_to_english: this.traditonalchinese_to_english,             };     emit(this.original_ID, values); };
+map_japan = function() {     var values = {        japanese: this.japanese,        japanese_equivalent: this.japanese_equivalent,        japanese_to_english:this.japanese_to_english,     };     emit(this.original_ID, values); };
+map_korea = function() {     var values = {        korean: this.korean,        korean_to_chinese: this.korean_to_chinese,        o_korean_to_english:this.o_korean_to_english,        e_korean_to_english:this.e_korean_to_english,     };     emit(this.original_ID, values); };
+reduce = function(key, values) {     var result = {};     values.forEach(function(value) {         var field;         for (field in value) {             if (value.ha
+use join
+db.join.update({'_id': '1'}, {'$set': {'value': NumberInt(0)}})
+db.join.update({'_id': '1'}, {'$set': {'_id': NumberInt(0)}})
+use cjkt
+map_taiwan = function() {     var values = {         original_ID: this.original_ID,         chinese_traditionalshape: this.chinese_traditionalshape, chinese_statutory: this.chinese_statutory, chinese_equivalent: this.chinese_equivalent, chinese_equivalent_statutory: this.chinese_equivalent_statutory, traditonalchinese_to_english: this.traditonalchinese_to_english,             };     emit(this.original_ID, values); };
+map_japan = function() {     var values = {         japanese: this.japanese, japanese_statutory: this.japanese_statutory,         japanese_equivalent: this.japanese_equivalent, japanese_equivalent_statutory: this.japanese_equivalent_statutory,         japanese_to_english:this.japanese_to_english,     };     emit(this.original_ID, values); };
+map_korea = function() {     var values = { korean: this.korean, korean_to_chinese: this.korean_to_chinese, korean_statutory: this.korean_statutory, korean_equivalent: this.korean_equivalent, korean_equivalent_statutory: this.korean_equivalent_statutory, o_korean_to_english:this.o_korean_to_english, e_korean_to_english:this.e_korean_to_english,     };     emit(this.original_ID, values); };
+map_china = function() {     var values = { china: this.china, china_statutory: this.china_statutory, china_equivalent: this.china_equivalent, china_equivalent_statutory: this.china_equivalent_statutory, china_to_english:this.china_to_english,     };     emit(this.original_ID, values); };
+reduce = function(key, values) {     var result = {};     values.forEach(function(value) {         var field;         for (field in value) {             if (value.hasOwnProperty(field))  {                 result[field] = value[field];             }         }     });     return result; };
+db.taiwan.mapReduce(map_taiwan,reduce, {"out":{"reduce":"join"}})
+db.japan.mapReduce(map_japan,reduce, {"out":{"reduce":"join"}})
+db.korea.mapReduce(map_korea,reduce, {"out":{"reduce":"join"}})
+db.china.mapReduce(map_china,reduce, {"out":{"reduce":"join"}})
+use cjkt
+map_taiwan = function() {     var values = {         original_ID: this.original_ID,         chinese_traditionalshape: this.chinese_traditionalshape, chinese_statutory: this.chinese_statutory, chinese_equivalent: this.chinese_equivalent, chinese_equivalent_statutory: this.chinese_equivalent_statutory, traditonalchinese_to_english: this.traditonalchinese_to_english,             };     emit(this.original_ID, values); };
+map_china = function() {     var values = { china: this.china, china_statutory: this.china_statutory, china_equivalent: this.china_equivalent, china_equivalent_statutory: this.china_equivalent_statutory, china_to_english:this.china_to_english,     };     emit(this.original_ID, values); };
+map_korea = function() {     var values = { korean: this.korean, korean_to_chinese: this.korean_to_chinese, korean_statutory: this.korean_statutory, korean_equivalent: this.korean_equivalent, korean_equivalent_statutory: this.korean_equivalent_statutory, o_korean_to_english:this.o_korean_to_english, e_korean_to_english:this.e_korean_to_english,     };     emit(this.original_ID, values); };
+map_japan = function() {     var values = {         japanese: this.japanese, japanese_statutory: this.japanese_statutory,         japanese_equivalent: this.japanese_equivalent, japanese_equivalent_statutory: this.japanese_equivalent_statutory,         japanese_to_english:this.japanese_to_english,     };     emit(this.original_ID, values); };
+db.japan.mapReduce(map_japan,reduce, {"out":{"reduce":"join"}})
+reduce = function(key, values) {     var result = {};     values.forEach(function(value) {         var field;         for (field in value) {             if (value.hasOwnProperty(field))  {                 result[field] = value[field];             }         }     });     return result; };
+db.taiwan.mapReduce(map_taiwan,reduce, {"out":{"reduce":"join"}})
+db.korea.mapReduce(map_korea,reduce, {"out":{"reduce":"join"}})
+db.japan.mapReduce(map_japan,reduce, {"out":{"reduce":"join"}})
+db.china.mapReduce(map_china,reduce, {"out":{"reduce":"join"}})

@@ -1,0 +1,35 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sys/types.h>
+#include <regex.h>
+#include <stdio.h>
+using namespace std;
+
+#define SIZE 150 
+int main()
+{
+	FILE *fPtr;
+	char temp[SIZE];
+	string convert;
+	string law[100];
+	int law_count = 0;
+
+    fPtr = fopen("law.csv","r");
+	if(!fPtr)
+	{
+		cout<<"讀檔失敗"<<endl; //check
+	}
+	while(fgets(temp,150,fPtr)!=NULL)
+	{
+		
+		convert.assign(temp);       //convert to string
+		cout<<convert;
+		law[law_count]=convert;
+		law_count++;
+		cout<<law_count;
+		cout<<law[law_count];		
+	}
+ 	fclose(fPtr);
+    return 0;
+}

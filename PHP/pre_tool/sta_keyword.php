@@ -15,7 +15,7 @@ $total_1 = $total_2 = $total_3 = $total_4 = $total_5 =0;
 for($lcount=0; $lcount<count($filename_arr);$lcount++)
 {
 	$temp = file_get_contents($path.$filename_arr[$lcount]); //一次讀入所有內容
-	$total_1 += substr_count($temp,"如下");
+	$total_1 += substr_count($temp,"有下列情形之一");
 	$total_2 += substr_count($temp,"下列");
 	$total_3 += substr_count($temp,"如左");
 	$total_4 += substr_count($temp,"左列");

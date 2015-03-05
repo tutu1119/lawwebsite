@@ -9,7 +9,7 @@ while(!feof($fp))
 {
     $dir_id[] = fgets($fp);
 }
-echo $dir_id[237];
+//echo $dir_id[237];
 $dir_size = count($dir_id);
 $definition_law_total = 0;
 $total_law = 0;

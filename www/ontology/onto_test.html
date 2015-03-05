@@ -1,0 +1,304 @@
+<html>
+<style>
+
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+#licensing {
+  fill: green;
+}
+
+.link.licensing {
+  stroke: green;
+}
+
+.link.resolved {
+  stroke-dasharray: 0,2 1;
+}
+
+circle {
+  fill: white;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 10px sans-serif;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+</style>
+<head>
+	<title>testing here</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="d3/d3.min.js" charset="utf-8"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background: rgba(0, 0, 0, 0.75);">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Law ontology</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+		<form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+			  <input type="text" class="form-control" style="background-color:transparent; color:white;" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-warning">Submit</button>
+		</form>
+        </div><!--/.nav-collapse -->
+      </div>
+</nav>
+<div class="container" style="position: relative; margin-top: 100px;">
+<form action="">
+
+	<div style="float: left;width: 50%; height: 85%;">
+		<table style="float: right;" class="table table-bordered">
+			<h3>證券交易法</h3>
+			
+		 <thead>
+		  <tr>
+			 <th>Num</th>
+			 <th>Context</th>
+		  </tr>
+		 </thead>
+			<tr onclick="MySvg(1)">
+				<td >第5條</td>
+				<td>本法所稱發行人，謂募集及發行有價證券之公司，或募集有價證券之發起人。</td>
+			</tr>
+			<tr onclick="MySvg(2)">
+				<td >第6條</td>
+				<td>本法所稱有價證券，指政府債券、公司股票、公司債券及經主管機關核定之其他有價證券。<br>
+					新股認購權利證書、新股權利證書及前項各種有價證券之價款繳納憑證或表明其權利之證書，視為有價證券。<br>
+					前二項規定之有價證券，未印製表示其權利之實體有價證券者，亦視為有價證券。</td>
+			</tr>
+		</table>	
+	</div>
+	<div id="d3_svg" style="float: right;width: 50%; height: 85%;">
+		<!--<iframe style="width: 100%; height: 100%;" name="iframe_tar"></iframe>-->
+		<p id="demo"></p>
+
+	</div>
+
+</form>
+</div>
+<script type="text/javascript">
+	$('tr').click( function() 
+	{
+		$('tr').css('background', 'white')
+		$(this).css('background', 'rgb(218, 245, 230)')
+	} );
+function MySvg(val)
+{
+	//改變顏色
+
+	//document.getElementById("d3_svg").innerHTML="";
+	$("#d3_svg").empty();
+	//處理資料，改變型態並存入result
+	var result=[]; //array
+	var rdf_str = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";		
+	var owl_withid = "http://example.com/onto_test/"+val+"#";
+	var owl_str = "http://www.w3.org/2002/07/owl#";
+	var schema_str ="http://www.w3.org/2000/01/rdf-schema#";
+	$.ajax
+	({
+	  url: 'http://140.123.230.241:3030/jena_tdb/query?query=SELECT * WHERE { ?s ?o ?b .  FILTER regex(str(?s), "^http://example.com/onto_test/'+val+'") .}',
+	  type: "GET",
+	  dataType: "json",
+	  async: false,
+	  success: function(Jdata) 
+	  {
+	    //alert("SUCCESS!!!");
+
+		
+	    var NumOfJData = Jdata["results"]["bindings"].length;
+		
+	    //alert(Jdata["results"]["bindings"][1]['s']["value"]);
+
+		for(var i = 0; i < NumOfJData; i++) 
+		{
+			//Jdata["results"]["bindings"][i]['s']["value"]+"\n"+Jdata["results"]["bindings"][i]['o']["value"];
+			//型態 class
+			/*
+			if(Jdata["results"]["bindings"][i]['o']["value"]==(rdf_str+"type") && Jdata["results"]["bindings"][i]['b']["value"]==(owl_str+"Class"))
+			{				
+				result.push({
+				source: Jdata["results"]["bindings"][i]['s']["value"].replace(owl_withid,""),
+				type: Jdata["results"]["bindings"][i]['b']["value"].replace(owl_str,"")
+				});			
+			}*/
+			//型態 equivalentClass
+			if(Jdata["results"]["bindings"][i]['o']["value"]==(owl_str+"equivalentClass"))
+			{
+				result.push({
+				source: Jdata["results"]["bindings"][i]['s']["value"].replace(owl_withid,""),
+				//type: "equivalentClass",
+				type: "suit",
+				target:	Jdata["results"]["bindings"][i]['b']["value"].replace(owl_withid,"")
+				});					
+			}
+			//型態 Property
+			else if(Jdata["results"]["bindings"][i]['o']["value"]==(rdf_str+"type") && Jdata["results"]["bindings"][i]['b']["value"]==(rdf_str+"Property"))
+			{
+				//Property value
+				var Property = Jdata["results"]["bindings"][i]['s']["value"];
+				//var src
+				for(var count = 0; count < NumOfJData; count++) 
+				{
+					if(Jdata["results"]["bindings"][count]['s']["value"]==Property && Jdata["results"]["bindings"][count]['b']["value"]!=(rdf_str+"Property"))
+					{
+						//from
+						if(Jdata["results"]["bindings"][count]['o']["value"]==(schema_str+"range"))
+						{
+							src_temp = Jdata["results"]["bindings"][count]['b']["value"].replace(owl_withid,"");
+						}
+						else if(Jdata["results"]["bindings"][count]['o']["value"]==(schema_str+"domain"))
+						{
+							tar_temp = Jdata["results"]["bindings"][count]['b']["value"].replace(owl_withid,"");
+						}
+						if((typeof src_temp !='undefined')&&(typeof tar_temp !='undefined'))//檢查兩個端是否已經定義
+						{
+							//alert("src:"+src_temp+"  tar:"+tar_temp);
+							result.push({
+							source: src_temp,
+							//type: "Property",
+							type: "licensing",
+							target:	tar_temp,
+							//label: Property.replace(owl_withid,"")
+							});	
+							//歸零變數
+							delete(tar_temp);
+						}
+					}
+
+				}
+				//alert("XDDDDD");
+			}
+			
+		}
+		//for testing
+		console.log(result);
+	  },	  
+	  error: function() 
+	  {
+	    alert("ERROR!!!");
+	  }	  
+	});
+	//繪圖svg
+	/*
+	var links = [
+	  {source: "發起人", target: "發行人", type: "licensing"},
+	  {source: "發起人", target: "公司", type: "licensing"},
+	  {source: "發起人", target: "第5條", type: "suit"},
+	  {source: "發起人", target: "募集及發行有價證券", type: "suit"}
+	  ];
+	*/
+	//console.log(links);
+	var width = 600,
+		height = 400;
+	var nodes = {};
+
+	// Compute the distinct nodes from the links.
+	result.forEach(function(link) {
+	  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+	  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
+	});
+	
+	var force = d3.layout.force()
+		.nodes(d3.values(nodes))
+		.links(result)
+		.size([width, height])
+		.linkDistance(100)
+		.charge(-250)
+		.on("tick", tick)
+		.start();
+
+	var svg = d3.select("#d3_svg").append("svg")
+		.attr("width", width)
+		.attr("height", height);
+
+	// Per-type markers, as they don't inherit styles.
+	svg.append("defs").selectAll("marker")
+		.data(["suit", "licensing", "resolved"])
+		.enter().append("marker")
+		.attr("id", function(d) { return d; })
+		.attr("viewBox", "0 -5 10 10")
+		.attr("refX", 15)
+		.attr("refY", -1.5)
+		.attr("markerWidth", 6)
+		.attr("markerHeight", 6)
+		.attr("orient", "auto")
+	  .append("path")
+		.attr("d", "M0,-5L10,0L0,5");
+		
+	var path = svg.append("g").selectAll("path")
+		.data(force.links())
+	  .enter().append("path")
+		.attr("class", function(d) { return "link " + d.type; })
+		.attr("marker-end", function(d) { return "url(#" + d.type + ")"; });
+
+
+	var circle = svg.append("g").selectAll("circle")
+		.data(force.nodes())
+	  .enter().append("circle")
+		.attr("r", 15)
+		.text(function(d){return d.name;})
+		.attr("text-anchor","middle")
+		.call(force.drag)
+		
+
+
+	var text = svg.append("g").selectAll("text")
+		.data(force.nodes())
+	  .enter().append("text")
+		.attr("x", -5)
+		.attr("y", "0em")
+		.text(function(d) { return d.name; });
+
+	// Use elliptical arc path segments to doubly-encode directionality.
+	function tick() {
+	  path.attr("d", linkArc);
+	  circle.attr("transform", transform);
+	  text.attr("transform", transform);
+	}
+
+	function linkArc(d) {
+	  var dx = d.target.x - d.source.x,
+		  dy = d.target.y - d.source.y,
+		  dr = Math.sqrt(dx * dx + dy * dy);
+	  return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + (d.target.x) + "," + (d.target.y+15);
+	}
+
+	function transform(d) {
+	  return "translate(" + d.x + "," + d.y + ")";
+	}
+}
+</script>
+</body>
+</html>

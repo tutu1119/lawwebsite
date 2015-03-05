@@ -1,0 +1,373 @@
+/*
+         Sample Discrete Event Simulation Program: DUAL-CPU system
+
+Simulate a dual-CPU system.  Jobs arrive according to a Poisson process
+with rate lambda.  An arriving job joins the process queue at the CPU which
+has the shortest queue of processes at the arrival instant.  The two
+processors have processing rates mu[0] and mu[1] (exponentially distributed
+service time).
+
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+//#include "llp.h"
+//#include "event.c"
+
+#define ARRIVAL_FROM_SOURCE  0
+#define JOB_COMPLETION 1
+#define YES 1
+#define NO  0
+#define MAXJOBS 100
+#define NCPUS  2
+
+//struct event evTable[BUCKET];  /* events are sorted in buckets */
+int evhead=0;            /* bucket index: which one are we scanning */
+double cur_time=0;     /* current time, aligned with U_TIME */
+//struct event *ev_freelist=NULL;   /* the free event list */
+
+int seed =12345;
+
+#define LARGE
+#ifdef LARGE
+#define BUCKET 128
+#define BBITS  7      /* 2^7 */
+#define BUCKET_1 0x0000007f
+#define U_TIME 0.02
+#else
+#define BUCKET 32
+#define BBITS  5      /* 2^5 */
+#define BUCKET_1 0x0000001f   /* 31 in hex */
+#define U_TIME 0.1    /* unit of time used for bucket scanning */
+#endif
+
+#define NN 312
+#define MM 156
+#define MATRIX_A 0xB5026F5AA96619E9ULL
+#define UM 0xFFFFFFFF80000000ULL /* Most significant 33 bits */
+#define LM 0x7FFFFFFFULL /* Least significant 31 bits */
+/* The array for the state vector */
+static unsigned long long mt[NN]; 
+/* mti==NN+1 means mt[NN] is not initialized */
+static int mti=NN+1; 
+/* initializes mt[NN] with a seed */
+void init_genrand64(unsigned long long seed)
+{
+    mt[0] = seed;
+    for (mti=1; mti<NN; mti++) 
+        mt[mti] =  (6364136223846793005ULL * (mt[mti-1] ^ (mt[mti-1] >> 62)) + mti);
+}
+
+/* generates a random number on [0, 2^64-1]-interval */
+unsigned long long genrand64_int64(void)
+{
+    int i;
+    unsigned long long x;
+    static unsigned long long mag01[2]={0ULL, MATRIX_A};
+
+    if (mti >= NN) { /* generate NN words at one time */
+
+        /* if init_genrand64() has not been called, */
+        /* a default initial seed is used     */
+        if (mti == NN+1) 
+            init_genrand64(5489ULL); 
+
+        for (i=0;i<NN-MM;i++) {
+            x = (mt[i]&UM)|(mt[i+1]&LM);
+            mt[i] = mt[i+MM] ^ (x>>1) ^ mag01[(int)(x&1ULL)];
+        }
+        for (;i<NN-1;i++) {
+            x = (mt[i]&UM)|(mt[i+1]&LM);
+            mt[i] = mt[i+(MM-NN)] ^ (x>>1) ^ mag01[(int)(x&1ULL)];
+        }
+        x = (mt[NN-1]&UM)|(mt[0]&LM);
+        mt[NN-1] = mt[MM-1] ^ (x>>1) ^ mag01[(int)(x&1ULL)];
+
+        mti = 0;
+    }
+  
+    x = mt[mti++];
+
+    x ^= (x >> 29) & 0x5555555555555555ULL;
+    x ^= (x << 17) & 0x71D67FFFEDA60000ULL;
+    x ^= (x << 37) & 0xFFF7EEE000000000ULL;
+    x ^= (x >> 43);
+
+    return x;
+}
+
+/* generates a random number on [0,1]-real-interval */
+double genrand64_real1(void)
+{
+    return (genrand64_int64() >> 11) * (1.0/9007199254740991.0);
+}
+
+
+double uniform()          /* return double prec. r.n. uniform in [0,1] */ 
+{
+  long ix = seed;
+  long k = ix/127773;
+  ix = 16807*(ix - k*127773) - k*2836;
+  if (ix < 0) ix += 2147483647;
+  seed = ix;
+  return((double) ix * 4.656612875e-10);
+}
+
+//double random()          /* return double prec. r.n. uniform in [0,1] */ 
+//{
+//  long ix = seed;
+//  long k = ix/127773;
+//  ix = 16807*(ix - k*127773) - k*2836;
+//  if (ix < 0) ix += 2147483647;
+//  seed = ix;
+//  return((double) ix * 4.656612875e-10);
+//}
+
+double expo(t)
+float t;
+{
+       double x;
+       
+       x = genrand64_real1();
+       return( -log(x)/t);
+}
+
+
+
+/************************************************************************/
+/*                   global data structures                             */
+/************************************************************************/
+struct event {
+    float evtime;    /* this field used for insertion into event list */
+    int evcode;      /*==0 => arrival to system, 1 is departure */
+    int  nodecode;   /* nodeid at which event takes place        */
+    struct event *next;
+    struct event *prev;
+    };
+
+struct proc {                 /* structure containing info about a queued job */
+    long int jobid;           /* id of job arriving    */
+    float arrival_time;       /* arrival time at queue */
+    } ;
+struct proc CPU[NCPUS][MAXJOBS];  
+                              /* array of structures for jobs queued at CPU[i]*/
+
+
+long njobs = 0;               /* numner of jobs arrived so far */
+int nqueued[NCPUS];           /* number of jobs queued at ith CPU */
+int firstjob[NCPUS];          /* firstjob[0] is the index into CPU[0][] for 
+                                 info about currently executing job on CPU0. */
+long njobsdone[NCPUS];        /* a count of how many jobs competed at CPUi */
+double delaysum[NCPUS];       /* sum of all jobs' delays thru CPUi */
+
+
+struct event *evlist = NULL;              /* the event list */
+float simtime;                            /* simulated time */
+float stoptime;
+
+
+float lambda;              /* total arrival rate of jobs to system */
+float mu[NCPUS];           /* service rate at node i               */
+int TRACE = 1;
+//char *malloc();
+
+void
+insertevent(struct event *p)
+//event p;
+{
+   struct event *q,*qold;
+   int delt, bucket;
+   long ptime;
+
+   /* units of time before expiration */
+   ptime = (long) floor((p->evtime-cur_time)/U_TIME);
+   /* which bucket to put into */
+   bucket = (int) ((ptime+evhead) & BUCKET_1);
+   /* time before expireation in units of round-trip bucket scan time */
+   delt = (int) (ptime >> BBITS);
+   q = evlist;
+            /* q points to header of list in which p struct inserted */
+   if (q==NULL) {   /* list is empty */
+     evlist=p;
+     p->next = NULL;
+     p->prev = NULL;
+     //p->delta = delt;
+   }
+   else {
+     /* find the place for p to insert */
+     for (; q !=NULL && p->evtime > q->evtime; q=q->next) {
+       qold=q; 
+       //delt -= q->delta;
+     }
+     //p->delta = delt;
+     if (q==NULL) {   /* end of list */
+       qold->next = p;
+       p->prev = qold;
+       p->next = NULL;
+     }
+     else if (q==evlist) { /* front of list */
+       p->prev=NULL;
+       p->next=q;
+       q->prev = p;
+       evlist = p;
+       //q->delta -= delt;
+     }
+     else {     /* middle of list */
+       p->prev = qold;
+       p->next=q;
+       qold->next=p;
+       q->prev = p;
+       //q->delta -= delt;
+     }
+   }
+}
+
+
+
+main()
+{
+   struct event *eventptr;
+   float stoptime,avgdelay[NCPUS];
+   double x,uniform(),expo(),sum;
+   int rc,i;
+
+   //init_rng();     /* initialize uniform random number generator  */
+   nqueued[0] = nqueued[1] = 0;
+   firstjob[0] = firstjob[1] = 0;
+   njobsdone[0] = njobsdone[1] = 0;
+   delaysum[0] = delaysum[1] = 0.0;
+   simtime = 0.0;
+
+   printf("Enter nodal lambda: "); scanf("%f",&lambda); 
+   printf("Enter mu1: "); scanf("%f",&mu[0]);
+   printf("Enter mu2: "); scanf("%f",&mu[1]);
+   printf("Enter time to stop simulation: "); scanf("%f",&stoptime);
+   printf("Enter TRACE FLAG: "); scanf("%d",&TRACE);
+   
+   gen_new_arrival();     /* initialize event list to first arrival */
+   while (simtime < stoptime) {
+       /* FIRST GET AN EVENT OFF OF THE EVENT LIST */
+       if (evlist==NULL)
+          { printf("PANIC: No next event\n"); exit(-1);}
+          //{ printf("PANIC: No next event\n"); exit(-1);}
+       eventptr = evlist;
+       evlist = evlist->next;      /* remove event from event list */
+       if (evlist!=NULL)
+          evlist->prev=NULL;
+          
+       /* AND NEXT PROCESS (SIMULATE) THAT EVENT */
+       simtime = eventptr->evtime;
+       if (eventptr->evcode == ARRIVAL_FROM_SOURCE) {   /* ARRIVAL EVENT */
+            if (nqueued[0] < nqueued[1])
+                 process_arrival(0);
+               else if (nqueued[1] < nqueued[0])
+                 process_arrival(1);
+               else  { 
+                 if ( (x = uniform()) < 0.5)
+                     process_arrival(0);
+                     else process_arrival(1);
+                  } 
+             gen_new_arrival();
+             }
+        else 
+            process_job_completion(eventptr->nodecode); /* JOB COMPLETED EVENT*/
+        }   /* end of while loop */   
+
+   for (i=0; i<2; i++) {     /* compute average delay */
+     avgdelay[i] = delaysum[i]/njobsdone[i];
+     printf("Average delay thru CPU %d was %f\n",i,avgdelay[i]);
+     }
+
+}           /* end of simulation */
+
+
+
+
+
+
+/************************************************************************/
+/* PROCESSARRIVAL: process an arrival event:                            */
+/*      1. queue a job for execution at CPU i.   Initiate its simulated */
+/*         execution if the CPU was idle                                */
+/************************************************************************/
+         
+process_arrival(i)               /* handle an arrival at CPU i */
+{
+   double x,expo();
+   int index; 
+   struct event *evptr;
+
+   if (TRACE==YES) {
+      printf("PROCESSARRIVAL: time is %f, node is %d\n",simtime,i);
+      }
+
+   index = (firstjob[i]+nqueued[i]) % MAXJOBS; /* indx into array of queued */
+   CPU[i][index].arrival_time = simtime;                 /* jobs at node i */
+   CPU[i][index].jobid = njobs++;
+
+   nqueued[i] = nqueued[i]+1;
+   if (nqueued[i]==1) {                      /* create a DEPARTURE EVENT  */
+      evptr = malloc(sizeof(struct event));  /* get mem for event receord */
+      if (evptr==NULL)
+         { printf("PANIC: No free memory\n"); exit(-1); }
+      evptr->evtime = simtime + expo(mu[i]); /* get time for job completion */
+      evptr->evcode = JOB_COMPLETION;
+      evptr->nodecode = i;
+      insertevent(evptr);
+      }
+}
+
+
+
+
+
+/*************************************************************************/
+/* PROCESS_JOB_COMPLETION: process the completion of a job at a node:    */
+/*      1. start an eligible job (if any).                               */
+/*************************************************************************/
+process_job_completion(i)
+  int i;
+{
+  struct event *evptr;
+  double expo();
+  float delay;
+
+  /* save performance-related information */
+  delay = (simtime-CPU[i][firstjob[i]].arrival_time);
+  delaysum[i] = delaysum[i]+delay;
+  njobsdone[i] = njobsdone[i]+1;
+
+
+  if (TRACE==YES) {
+      printf("PROCESSDEPARTURE: time is %f, node is %d, delay was %f\n",
+              simtime,i,delay);
+      }
+
+  /* update event-related data structures */
+  firstjob[i] = (firstjob[i]+1) % MAXJOBS;  /* new first job at CPU */
+  nqueued[i]--;                             /* one less jpb at this CPU */
+  if (nqueued[i]>0) {      /* start next job into service and schedule its */
+      evptr = malloc(sizeof(struct event));  /* COMPLETION */
+      if (evptr==NULL)
+         { printf("PANIC: No free memory\n"); exit(-1); }
+      evptr->evtime = simtime + expo(mu[i]); /* get time for job completion */
+      evptr->evcode = JOB_COMPLETION;
+      evptr->nodecode = i;
+      insertevent(evptr);
+      }
+}
+
+   
+gen_new_arrival()
+{
+    struct event *evptr;
+    double expo();
+
+    evptr = malloc(sizeof(struct event));    /* get memory for event receord */
+    if (evptr==NULL)
+       { printf("PANIC: No free memory\n"); exit(1); }
+    evptr->evtime = simtime + expo(lambda); /* init ARRIVAL_FROM_SOURCE event */
+    evptr->evcode = ARRIVAL_FROM_SOURCE;    
+    evptr->nodecode = -1;
+    insertevent(evptr);
+}

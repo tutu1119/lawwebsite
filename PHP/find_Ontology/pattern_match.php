@@ -1,6 +1,6 @@
 <?php
-	include "../rule.php";
-
+	include "/home/tutu/PHP/rule.php";
+    //print_r($rule);
 	// link to database
 	$link = mysql_connect('localhost', 'root', 'password');
 	if (!$link) {
@@ -16,30 +16,33 @@
     	die ("Can\'t usefoo : " . mysql_error());
 	}
 	echo "switch to db successfully\n";
-
-	
+	//result_lawkind_rule
+	//$fp = fopen('result_0_2.txt', 'w');
 	mysql_query("SET NAMES 'utf8'");
 	//句子開頭會因為"法" "條例" "通則"而有所不同
-	$head_pattern = "/^本通則所(.*)/";
-	$head_pattern_2 = "/^本通則(.*)/";
+	$head_pattern = "/^本法所(.*)/";
+	$head_pattern_2 = "/^本法(.*)/";
 	//計算全部總數
 	$lawid_counter=0; //該總類法規數量
 	$field_number = 0;//法規條文欄位
 	$sentence_number = 0;//切割後句子單位
 	$match_number = 0;
-	
-	$sql = "SELECT lawtext_id FROM text_dir WHERE kind=3";
+/*	
+	$sql = "SELECT lawtext_id FROM text_dir WHERE kind=0";
 	$lawid_temp = mysql_query($sql);
 	
 	while($lawid_array =  mysql_fetch_array($lawid_temp))
 	{
+*/
 		$Clause_array = array();
 		$res = array();
-		$sql ="SELECT * FROM  ".$lawid_array['lawtext_id']." WHERE is_chapter IS NULL";
+		//$sql ="SELECT * FROM  ".$lawid_array['lawtext_id']." WHERE is_chapter IS NULL";
+		
+		$sql ="SELECT * FROM G0400001 WHERE is_chapter IS NULL";
 		$clause_temp = mysql_query($sql);
 		
 		$law_size = 0;
-		$rule_size = count($rule); //pattern
+		$rule_size =16; //patterncount($rule)
 		//count sentence sum
 		$sentence_sum = 0;
 		//count match sentence number
@@ -81,7 +84,6 @@
 						$clause_cut[$cut_temp] = $res[$count]."。";
 						$count++;
 						$mergekey = itemornot(trim($res[$count]));			
-							
 						while(($mergekey==1))
 						{
 							$clause_cut[$cut_temp] .= $res[$count]."。";
@@ -132,7 +134,7 @@
 			if($multi_sentences == 0) //單一句子
 			{
 				$have_match = 0;
-				for($count = 0; $count<$rule_size; $count++)
+				for($count =0; $count<$rule_size; $count++)
 				{
 					if((preg_match($rule[$count],$Clause_array[$law_size]['context']))&&($have_match!=1))
 					{
@@ -141,6 +143,11 @@
 						$have_match = 1; //已經找到配對的pattern，則set為1
 						$match_pattern_num++;
 					}
+				}
+				if($have_match == 1)
+				{
+					//fwrite($fp, $Clause_array[$law_size]['context']."\n");
+					echo "\n".$Clause_array[$law_size]['context']."\n";
 				}
 				$sentence_sum++;
 			}
@@ -159,9 +166,15 @@
 							$match_pattern_num++;
 						}
 					}
+					if($have_match == 1)
+					{
+						//fwrite($fp, $clause_cut[$array_count]."\n");
+						echo "\n".$clause_cut[$array_count]."\n";
+					}					
 				}			
 				$sentence_sum += count($clause_cut);			
 			}
+	
 			//$period_count += $temp_count;	//計算句號個數
 			$law_size++;
 			//echo $multi_sentences."\t";
@@ -176,7 +189,8 @@
 		$sentence_number += $sentence_sum;
 		$match_number += $match_pattern_num;
 		$lawid_counter++;
-	}		
+	//}		
+	//fclose($fp);
 	//echo "\n".$period_count."\n";
 	//統計結果
 	echo "法規數量: ".$lawid_counter."\n";

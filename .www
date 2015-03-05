@@ -1,0 +1,5 @@
+<?php
+$db_conn = @mysql_connect("140.123.230.53", "lomea", "lomea") or die ("Could not connect: " . mysql_error());
+mysql_select_db("lomea", $db_conn)or die ("Die" );
+echo "XD";
+?>
